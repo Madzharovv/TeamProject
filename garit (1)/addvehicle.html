@@ -14,7 +14,7 @@
         <div class="sidebar__menu"></div>
         <ul class="side-nav">
           <li class="reception__sidebar-nav-item reception">
-            <a href="/allcustomers.html"
+            <a href="./allcustomers.html"
               ><img
                 src="img/reception/reception1.svg"
                 alt="Reception Images"
@@ -22,7 +22,7 @@
             >
           </li>
           <li class="reception__sidebar-nav-item reception">
-            <a href="/allvehicles.html"
+            <a href="./allvehicles.html"
               ><img
                 src="img/reception/reception2.svg"
                 alt="Reception Images"
@@ -30,7 +30,7 @@
             >
           </li>
           <li class="reception__sidebar-nav-item reception">
-            <a href="/alljobs.html"
+            <a href="./alljobs.html"
               ><img
                 src="img/reception/reception3.svg"
                 alt="Reception Images"
@@ -38,7 +38,7 @@
             >
           </li>
           <li class="reception__sidebar-nav-item reception">
-            <a href="/invoicepage.html"
+            <a href="./invoicepage.html"
               ><img
                 src="img/reception/reception4.svg"
                 alt="Reception Images"
@@ -46,7 +46,7 @@
             >
           </li>
           <li class="reception__sidebar-nav-item reception">
-            <a href="/availableparts.html"
+            <a href="./availableparts.html"
               ><img
                 src="img/reception/reception6.svg"
                 alt="Reception Images"
@@ -54,7 +54,7 @@
             >
           </li>
           <li class="reception__sidebar-nav-item reception reception-last">
-            <a href="/login.html"
+            <a href="./login.html"
               ><img
                 src="img/reception/reception7.svg"
                 alt="Reception Images"
@@ -114,19 +114,22 @@
                     <label for="fname" class="form__label"
                       >Vehicle Number</label
                     >
-                    <input type="text" class="form__input" />
+                    <input type="text" class="form__input" id = 'number'/>
+                      <span id="number-error" style="color:Red"></span>
                   </div>
                   <div class="form__input-box">
                     <label for="fname" class="form__label"
                       >Vehicle Chassis Number</label
                     >
-                    <input type="text" class="form__input" />
+                    <input type="text" class="form__input" id = 'chassisnumber'/>
+                      <span id="chassis-error" style="color:Red"></span>
                   </div>
                 </div>
                 <div class="form__box">
                   <div class="form__input-box form__input-box--password">
                     <label for="fname" class="form__label">Vehicle Color</label>
-                    <input type="text" class="form__input form__input" />
+                    <input type="text" class="form__input form__input" id = 'vehiclecolour'/>
+                      <span id="colour-error" style="color:Red"></span>
                   </div>
                 </div>
 
@@ -135,13 +138,15 @@
                     <label for="fname" class="form__label"
                       >Vehicle Last MOT date</label
                     >
-                    <input type="text" class="form__input" />
+                    <input type="text" class="form__input" id = 'lastmotdate'/>
+                      <span id="lmot-error" style="color:Red"></span>
                   </div>
                   <div class="form__input-box">
                     <label for="fname" class="form__label"
                       >Vehicle next MOT date</label
                     >
-                    <input type="text" class="form__input" />
+                    <input type="text" class="form__input" id = 'nextmotdate' />
+                      <span id="nmot-error" style="color:Red"></span>
                   </div>
                 </div>
                 <div class="form__box">
@@ -149,13 +154,15 @@
                     <label for="fname" class="form__label"
                       >Vehicle Reg. Number</label
                     >
-                    <input type="text" class="form__input" />
+                    <input type="text" class="form__input" id ='vehiclereg' minlength="1" maxlength="7"required />
+                      <span id="reg-error" style="color:Red"></span>
                   </div>
                   <div class="form__input-box">
                     <label for="fname" class="form__label"
                       >Customer Card ID</label
                     >
-                    <input type="text" class="form__input" />
+                    <input type="text" class="form__input" id = 'customerid'/>
+                      <span id="id-error" style="color:Red"></span>
                   </div>
                 </div>
                 <div class="form__cta">
