@@ -22,7 +22,7 @@ $query_CARDID = "SELECT CustomerCardID FROM GARITS_Customer WHERE CustomerCardID
 $query_MOBILENUMBER= "SELECT CustomerMobileNumber FROM GARITS_Customer WHERE CustomerMobileNumber ='$MOBILENUMBER'";
     $reg_MOBILENUMBER = mysql_query($db, $query_MOBILENUMBER);
 
-$query_CUSTOMERFAXNUMBER = "SELECT customerfaxnumber FROM GARITS_Customer WHERE customerfaxnumber ='$CUSTOMERFAXNUMBER'";
+$query_CUSTOMERFAXNUMBER = "SELECT CustomerFaxNumber FROM GARITS_Customer WHERE CustomerFaxNumber ='$CUSTOMERFAXNUMBER'";
     $reg_CUSTOMERFAXNUMBER = mysql_query($db, $query_CUSTOMERFAXNUMBER);
 
         if(mysql_num_rows($reg_CARDID) > 0){

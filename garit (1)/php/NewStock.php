@@ -18,7 +18,7 @@ $INVOICEIDNUMBER=$_POST['invoiceIDnumber'];
 
 //the data inputed in the fields is inserted in the database// 
 
-$query_PARTID = "SELECT partid FROM GARITS_StockLedger WHERE partid ='$PARTID'";
+$query_PARTID = "SELECT PartID FROM GARITS_StockLedger WHERE PartID ='$PARTID'";
         $reg_PARTID = mysql_query($db, $query_PARTID);
 
         if(mysql_num_rows($reg_JOBID) > 0){

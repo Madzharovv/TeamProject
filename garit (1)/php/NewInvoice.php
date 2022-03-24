@@ -19,13 +19,13 @@ $JOBID =$_POST['jobid'];
 $CARDID =$_POST['cardid'];
 //the data inputed in the fields is inserted in the database// 
 
-$query_INVOICEID = "SELECT invoiceid FROM GARITS_Invoice WHERE invoiceid ='$INVOICEID'";
+$query_INVOICEID = "SELECT CustomerInvoiceID FROM GARITS_Invoice WHERE CustomerInvoiceID ='$INVOICEID'";
         $reg_INVOICEID = mysql_query($db, $query_INVOICEID);
 
-$query_VEHICLEREGISTRATIONNUMBER= "SELECT vehicleregistrationnumber FROM GARITS_Invoice WHERE vehicleregistrationnumber ='$VEHICLEREGISTRATIONNUMBER'";
+$query_VEHICLEREGISTRATIONNUMBER= "SELECT FK_VehicleRegistrationIDNumber FROM GARITS_Invoice WHERE FK_VehicleRegistrationIDNumber ='$VEHICLEREGISTRATIONNUMBER'";
     $reg_VEHICLEREGISTRATIONNUMBER = mysql_query($db, $query_VEHICLEREGISTRATIONNUMBER);
 
-$query_JOBID = "SELECT jobid FROM GARITS_Invoice WHERE invoiceid ='$JOBID'";
+$query_JOBID = "SELECT FK_JobID FROM GARITS_Invoice WHERE FK_JobID ='$JOBID'";
     $reg_JOBID = mysql_query($db, $query_JOBID);
 
         if(mysql_num_rows($reg_INVOICEID) > 0){

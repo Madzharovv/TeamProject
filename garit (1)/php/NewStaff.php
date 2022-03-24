@@ -15,10 +15,10 @@ $USERNAME  = $_POST['username'];
 $PASSWORD =$_POST['psw'];//encryption of the password//
 
 
-$query_STAFFID = "SELECT staffid FROM GARITS_Staff WHERE staffid ='$STAFFID'";
+$query_STAFFID = "SELECT StaffID FROM GARITS_Staff WHERE StaffID ='$STAFFID'";
         $reg_STAFFID = mysql_query($db, $query_STAFFID);
 
-$query_USERNAME= "SELECT username FROM GARITS_Staff WHERE username ='$USERNAME'";
+$query_USERNAME= "SELECT StaffUsername FROM GARITS_Staff WHERE StaffUsername ='$USERNAME'";
     $reg_USERNAME = mysql_query($db, $query_USERNAME);
 
 

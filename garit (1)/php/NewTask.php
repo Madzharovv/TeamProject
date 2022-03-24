@@ -19,14 +19,11 @@ $STAFFID  =$_POST['staffid'];
 $JOBID  =$_POST['jobid'];
 //the data inputed in the fields is inserted in the database// 
 
-$query_TASKID = "SELECT taskid FROM GARITS_Task WHERE partid ='$TASKID'";
+$query_TASKID = "SELECT TaskID FROM GARITS_Task WHERE TaskID ='$TASKID'";
         $reg_TASKID = mysql_query($db, $query_TASKID);
 
-$query_STAFFID = "SELECT staffid FROM GARITS_Task WHERE partid ='$STAFFID'";
+$query_STAFFID = "SELECT FK_StaffID FROM GARITS_Task WHERE FK_StaffID ='$STAFFID'";
         $reg_STAFFID = mysql_query($db, $query_STAFFID);
-
-$query_JOBID = "SELECT jobid FROM GARITS_Task WHERE partid ='$JOBID'";
-        $reg_JOBID = mysql_query($db, $query_JOBID);
 
         if(mysql_num_rows($reg_TASKID) > 0){
             echo "<script language = 'javascript'>
@@ -36,13 +33,6 @@ $query_JOBID = "SELECT jobid FROM GARITS_Task WHERE partid ='$JOBID'";
 
         }
         if(mysql_num_rows($reg_STAFFID) > 0){
-            echo "<script language = 'javascript'>
-            alert('This Invoice ID is  already in the database.');
-            window.location.href='https://smcse.city.ac.uk/student/adbt117/form.php';
-            </script>";
-
-        }
-        if(mysql_num_rows($reg_JOBID) > 0){
             echo "<script language = 'javascript'>
             alert('This Invoice ID is  already in the database.');
             window.location.href='https://smcse.city.ac.uk/student/adbt117/form.php';

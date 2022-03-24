@@ -18,14 +18,14 @@ $VEHICLEREGISTRATIONNUMBER =$_POST['vehicleregistrationnumber'];
 
 //the data inputed in the fields is inserted in the database// 
 
-$query_JOBID = "SELECT jobid FROM GARITS_StockLedger WHERE jobid ='$JOBID'";
+$query_JOBID = "SELECT JobID FROM GARITS_StockLedger WHERE JobID ='$JOBID'";
         $reg_JOBID = mysql_query($db, $query_JOBID);
 
 
-    $query_CARDID = "SELECT cardid FROM GARITS_StockLedger WHERE cardid ='$CARDID'";
+    $query_CARDID = "SELECT FK_CustomerCardID FROM GARITS_StockLedger WHERE FK_CustomerCardID ='$CARDID'";
     $reg_CARDID = mysql_query($db, $query_CARDID);
 
-    $query_VEHICLEREGISTRATIONNUMBER= "SELECT vehicleregistrationnumber FROM GARITS_StockLedger WHERE vehicleregistrationnumber ='$VEHICLEREGISTRATIONNUMBER'";
+    $query_VEHICLEREGISTRATIONNUMBER= "SELECT FK_VehicleRegistrationIDNumber FROM GARITS_StockLedger WHERE FK_VehicleRegistrationIDNumber ='$VEHICLEREGISTRATIONNUMBER'";
     $reg_VEHICLEREGISTRATIONNUMBER = mysql_query($db, $query_VEHICLEREGISTRATIONNUMBER);
 
         if(mysql_num_rows($reg_JOBID) > 0){
