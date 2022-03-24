@@ -8,11 +8,13 @@ $db = new mysqli('smcse-stuproj00.city.ac.uk','adbt117','200012740','adbt117');
 //initialising the the php variables and linking them to the html ids//
 $INVOICEID = $_POST['invoiceid'];
 $ADDRESS =$_POST['address'];
+$DATE =$_POST['date'];
 $LABOURCOST= $_POST['labourcost'];
 $SERVICECOST = $_POST['servicecost'];
 $TOTALCOST=$_POST['totalcost'];
 $VAT  = $_POST['vat'];
 $DISCOUNT =$_POST['discount'];
+$DISCOUNTTYPE =$_POST['discounttype'];
 $GRANDTOTAL =$_POST['grandtototal'];
 $VEHICLEREGISTRATIONNUMBER =$_POST['vehicleregistrationnumber'];
 $JOBID =$_POST['jobid'];

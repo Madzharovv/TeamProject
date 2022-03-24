@@ -16,7 +16,7 @@ function LoginValidation() {
     return vCheck;
 }
 //customer validation//
-function CreateCustomervalidation(){
+function CreateCustomerValidation(){
 
     var vCheck =true;
     if ($('#cardid').val() === "") {
@@ -38,6 +38,68 @@ function CreateCustomervalidation(){
         $('#mobilenumber-error').text('Enter mobile number');
     } else {
         $('#mobilenumber-error').text('');
+    }
+
+    if ($('#email').val() === "") {
+        vCheck = false;
+        $('#email-error').text('Enter email');
+    } else {
+        $('#email-error').text('');
+    }
+
+    if ($('#postcode').val() === "") {
+        vCheck = false;
+        $('#postcode-error').text('Enter Postcode');
+    } else {
+        $('#postcode-error').text('');
+    }
+
+    if ($('#housenumber').val() === "") {
+        vCheck = false;
+        $('#housenumber-error').text('Enter house number');
+    } else {
+        $('#housenumber-error').text('');
+    }
+
+    if ($('#cardissuedate').val() === "") {
+        vCheck = false;
+        $('#cardissuedate-error').text('Enter the card issue date ');
+    } else {
+        $('#cardissuedate-error').text('');
+    }
+
+
+    if ($('#customerfaxnumber').val() === "") {
+        vCheck = false;
+        $('#customerfaxnumber-error').text('Enter customer fax number');
+    } else {
+        $('#customerfaxnumber-error').text('');
+    }
+    return vCheck;
+}
+//New Invoice validation//
+function CreateInvoiceValidation(){
+
+    var vCheck =true;
+    if ($('#invoiceid').val() === "") {
+        vCheck = false;
+        $('#invoiceid-error').text('Enter a Invoice ID Number');
+    } else {
+        $('#invoiceid-error').text('');
+    }
+
+    if ($('#address').val() === "") {
+        vCheck = false;
+        $('#address-error').text('Enter an Address ');
+    } else {
+        $('#address-error').text('');
+    }
+
+    if ($('#labourcost').val() === "") {
+        vCheck = false;
+        $('#labourcost-error').text('Enter labour cost');
+    } else {
+        $('#labourcost-error').text('');
     }
 
     if ($('#email').val() === "") {
@@ -77,65 +139,74 @@ function CreateCustomervalidation(){
     }
     return vCheck;
 }
-//New Invoice validation//
+
+
+//New Job validation//
 function CreateCustomervalidation(){
 
     var vCheck =true;
-    if ($('#invoiceid').val() === "") {
+    if ($('#JobID').val() === "") {
         vCheck = false;
-        $('#username-error').text('Enter a Customer Card ID');
+        $('#JobID-error').text('Enter a Customer Card ID');
     } else {
-        $('#username-error').text('');
+        $('#JobID-error').text('');
     }
 
-    if ($('#address').val() === "") {
+    if ($('#JobType').val() === "") {
         vCheck = false;
-        $('#password-error').text('Enter Fullname ');
+        $('#JobType-error').text('Enter Fullname ');
     } else {
-        $('#password-error').text('');
+        $('#JobType-error').text('');
     }
 
-    if ($('#labourcost ').val() === "") {
+    if ($('#JobStatus').val() === "") {
         vCheck = false;
-        $('#username-error').text('Enter mobile number');
+        $('#JobStatus-error').text('Enter mobile number');
     } else {
-        $('#username-error').text('');
+        $('#JobStatus-error').text('');
     }
 
-    if ($('#email').val() === "") {
+    if ($('#JobEstimatedTime').val() === "") {
         vCheck = false;
-        $('#username-error').text('Enter email');
+        $('#JobEstimatedTime-error').text('Enter email');
     } else {
-        $('#username-error').text('');
+        $('#JobEstimatedTime-error').text('');
     }
 
-    if ($('#postcode').val() === "") {
+    if ($('#JobDescription').val() === "") {
         vCheck = false;
-        $('#username-error').text('Enter User name');
+        $('#JobDescription-error').text('Enter User name');
     } else {
-        $('#username-error').text('');
+        $('#JobDescription-error').text('');
     }
 
-    if ($('#housenumber').val() === "") {
+    if ($('#JobAcceptedDate').val() === "") {
         vCheck = false;
-        $('#username-error').text('Enter house number');
+        $('#JobAcceptedDate-error').text('Enter house number');
     } else {
-        $('#username-error').text('');
+        $('#JobAcceptedDate-error').text('');
     }
 
-    if ($('#cardissuedate').val() === "") {
+    if ($('#JobDeadlineDate').val() === "") {
         vCheck = false;
-        $('#username-error').text('Enter the card issue date ');
+        $('#JobDeadlineDate-error').text('Enter the card issue date ');
     } else {
-        $('#username-error').text('');
+        $('#JobDeadlineDate-error').text('');
     }
 
 
-    if ($('#customerfaxnumber').val() === "") {
+    if ($('#FK_CustomerCardID').val() === "") {
         vCheck = false;
-        $('#username-error').text('Enter customer fax number');
+        $('#FK_CustomerCardID-error').text('Enter customer fax number');
     } else {
-        $('#username-error').text('');
+        $('#FK_CustomerCardID-error').text('');
+    }
+
+    if ($('#FK_VehicleRegistrationIDNumber').val() === "") {
+        vCheck = false;
+        $('#FK_VehicleRegistrationIDNumber-error').text('Enter customer fax number');
+    } else {
+        $('#FK_VehicleRegistrationIDNumber-error').text('');
     }
     return vCheck;
 }

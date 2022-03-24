@@ -8,6 +8,7 @@ $db = new mysqli('smcse-stuproj00.city.ac.uk','adbt117','200012740','adbt117');
 //initialising the the php variables and linking them to the html ids//
 $CARDID = $_POST['cardid'];
 $NAME =$_POST['fullname'];
+$CUSTOMERTYPE =$_POST['customertype'];
 $MOBILENUMBER= $_POST['mobilenumber'];
 $EMAIL = $_POST['email'];
 $POSTCODE=$_POST['postcode'];
