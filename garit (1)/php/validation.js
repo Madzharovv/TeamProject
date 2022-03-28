@@ -102,40 +102,72 @@ function CreateInvoiceValidation(){
         $('#labourcost-error').text('');
     }
 
-    if ($('#email').val() === "") {
+    if ($('#servicecost').val() === "") {
         vCheck = false;
-        $('#email-error').text('Enter email');
+        $('#servicecost-error').text('Enter email');
     } else {
-        $('#email-error').text('');
+        $('#servicecost-error').text('');
     }
 
-    if ($('#postcode').val() === "") {
+    if ($('#totalcost').val() === "") {
         vCheck = false;
-        $('#postcode-error').text('Enter User name');
+        $('#totalcost-error').text('Enter User name');
     } else {
-        $('#postcode-error').text('');
+        $('#totalcost-error').text('');
     }
 
-    if ($('#housenumber').val() === "") {
+    if ($('#vat').val() === "") {
         vCheck = false;
-        $('#housenumber-error').text('Enter house number');
+        $('#vat-error').text('Enter house number');
     } else {
-        $('#housenumber-error').text('');
+        $('#vat-error').text('');
     }
 
-    if ($('#cardissuedate').val() === "") {
+    if ($('#discount').val() === "") {
         vCheck = false;
-        $('#cardissuedate-error').text('Enter the card issue date ');
+        $('#discount-error').text('Enter the card issue date ');
     } else {
-        $('#cardissuedate-error').text('');
+        $('#discount-error').text('');
     }
 
 
-    if ($('#customerfaxnumber').val() === "") {
+    if ($('#grandtototal').val() === "") {
         vCheck = false;
-        $('#customerfaxnumber-error').text('Enter customer fax number');
+        $('#grandtototal-error').text('Enter customer fax number');
     } else {
-        $('#customerfaxnumber-error').text('');
+        $('#grandtototal-error').text('');
+    }
+    return vCheck;
+    
+    if ($('#vehicleregistrationnumber').val() === "") {
+        vCheck = false;
+        $('#vehicleregistrationnumber-error').text('Enter customer fax number');
+    } else {
+        $('#vehicleregistrationnumber-error').text('');
+    }
+    return vCheck;
+    
+    if ($('#jobid').val() === "") {
+        vCheck = false;
+        $('#jobid-error').text('Enter customer fax number');
+    } else {
+        $('#jobid-error').text('');
+    }
+    return vCheck;
+    
+    if ($('#cardid').val() === "") {
+        vCheck = false;
+        $('#cardid-error').text('Enter customer fax number');
+    } else {
+        $('#cardid-error').text('');
+    }
+    return vCheck;
+    
+    if ($('#grandtototal').val() === "") {
+        vCheck = false;
+        $('#grandtototal-error').text('Enter customer fax number');
+    } else {
+        $('#grandtototal-error').text('');
     }
     return vCheck;
 }

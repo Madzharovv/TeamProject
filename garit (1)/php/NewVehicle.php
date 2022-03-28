@@ -9,7 +9,7 @@ else{
           $VehicleRegistrationIDNumber = $_POST['vehiclereg'];
           $VehicleModel = $_POST['model'];
           $VehicleYear = $_POST['year'];
-          $VehicleNumber = $_POST['number'];
+          $VehicleNumber = $_POST['vnumber'];
           $VehicleEngineSerialNumber = $_POST['engineserialnum'];
           $VehicleChassisNumber = $_POST['chassisnumber'];
           $VehicleColour = $_POST['vehiclecolour'];
@@ -41,6 +41,6 @@ else{
      
 
 else{
-        mysql_query($db, "INSERT INTO GARITS_Vehicle (vechiclereg, model, number, mobile, engineserialnum, chassisnumber, vehiclecolour, lastmotdate, nextmotdate, customerid)")
+        mysql_query($db, "INSERT INTO GARITS_Vehicle (vechiclereg, model, vnumber, mobile, engineserialnum, chassisnumber, vehiclecolour, lastmotdate, nextmotdate, customerid)")
     }
 ?>
