@@ -68,7 +68,6 @@ function CreateCustomerValidation(){
         $('#cardissuedate-error').text('');
     }
 
-
     if ($('#customerfaxnumber').val() === "") {
         vCheck = false;
         $('#customerfaxnumber-error').text('Enter customer fax number');
