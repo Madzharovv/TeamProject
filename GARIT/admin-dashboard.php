@@ -64,7 +64,7 @@
                         $query_StaffTotal = "SELECT COUNT(GARITS_Staff.StaffID) FROM GARITS_Staff ";
                         $result = $db->query($query_StaffTotal);
                         $row = $result->fetch_assoc();
-                        echo "<p> total" . $row["COUNT(GARITS_Staff.StaffID)"] . "</p>"
+                        echo $row["COUNT(GARITS_Staff.StaffID)"] 
 
                       ?>
                     </span>

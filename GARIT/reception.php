@@ -62,7 +62,7 @@
                 ><img
                   src="img/reception/reception7.svg"
                   alt="Reception Images"
-                /><span>Logoutpudiiiii</span></a
+                /><span>Logout</span></a
               >
             </li>
           </ul>
@@ -102,7 +102,13 @@
                   </svg>
                 </div>
                 <div class="reception__icon-details">
-                  <p class="reception__icon-figure">100</p>
+                  <p class="reception__icon-figure">
+                    <?php
+                    $query_CustomerTable="SELECT * FROM GARITS_Customer";
+                    $result=$db->query($query_CustomerTable);
+                    echo $result->num_rows;
+                    ?>
+                  </p>
                   <p class="reception__name">Total customers</p>
                 </div>
               </div>
@@ -122,7 +128,13 @@
                   </svg>
                 </div>
                 <div class="reception__icon-details">
-                  <p class="reception__icon-figure">23</p>
+                  <p class="reception__icon-figure">
+                  <?php
+                    $query_VehicleTable="SELECT * FROM GARITS_Vehicle";
+                    $result=$db->query($query_VehicleTable);
+                    echo $result->num_rows;
+                    ?>
+                  </p>
                   <p class="reception__name">Total Vehicle</p>
                 </div>
               </div>
@@ -143,7 +155,13 @@
                   </svg>
                 </div>
                 <div class="reception__icon-details">
-                  <p class="reception__icon-figure">43</p>
+                  <p class="reception__icon-figure">
+                  <?php
+                    $query_CustomerTable="SELECT * FROM GARITS_Job WHERE JobStatus != 'Completed' ";
+                    $result=$db->query($query_CustomerTable);
+                    echo $result->num_rows;
+                    ?>
+                  </p>
                   <p class="reception__name">Total Job</p>
                 </div>
               </div>
@@ -212,7 +230,7 @@
                       Recently Added Vehicles
                     </p>
                     <button class="btn btn__head-table">
-                      <a href="/addvehicle.html">New</a>
+                      <a href="addvehicle.html">New</a>
                     </button>
                   </div>
                 </div>
@@ -268,7 +286,7 @@
                     />
                     <p class="table__head-description">Recently Created Jobs</p>
                     <button class="btn btn__head-table">
-                      <a href="/createjob.html">New</a>
+                      <a href="createjob.html">New</a>
                     </button>
                   </div>
                 </div>
@@ -309,7 +327,9 @@
                               "</td><td>" . $row["JobDeadlineDate"] . 
                               "</td><td>" . $row["JobStatus"] . 
                               "</td><td>" . $row["CustomerName"] . 
-                              "</td><td>" . "<a href=\"alterstatus.php?ID=". $row["JobID"] ." \"><img src=\"assets/icons/edit.svg\" /></a>" ."</td><td>";
+                              "</td><td>" . "<a href=\"alterstatus.php?ID=". $row["JobID"] ." \"><img src=\"assets/icons/edit.svg\" /></a>" ."</td><td>"
+                              . "<a href=\"deletejob.php?ID=". $row["JobID"] ." \"><img src=\"assets/icons/delete.svg\" /></a>" ."</td><td>"
+                              ;
                               
                           }
                       }

@@ -19,7 +19,7 @@
         <div class="sidebar__menu"></div>
         <ul class="side-nav">
           <li class="reception__sidebar-nav-item reception">
-            <a href="/allcustomers.php"
+            <a href="allcustomers.php"
               ><img
                 src="img/reception/reception1.svg"
                 alt="Reception Images"
@@ -35,7 +35,7 @@
             >
           </li>
           <li class="reception__sidebar-nav-item reception">
-            <a href="/alljobs.php"
+            <a href="alljobs.php"
               ><img
                 src="img/reception/reception3.svg"
                 alt="Reception Images"

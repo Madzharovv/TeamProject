@@ -176,7 +176,9 @@
                             "</td><td>" . $row["JobDeadlineDate"] . 
                             "</td><td>" . $row["JobStatus"] . 
                             "</td><td>" . $row["CustomerName"] . 
-                            "</td><td>" . "<a href=\"alterstatus.php?ID=". $row["JobID"] ." \"><img src=\"assets/icons/edit.svg\" /></a>" ."</td><td>";
+                            "</td><td>" . "<a href=\"alterstatus.php?ID=". $row["JobID"] ." \"><img src=\"assets/icons/edit.svg\" /></a>" ."</td><td>"
+                            . "<a href=\"deletejob.php?ID="  . $row["JobID"] . "\"><img src=\"assets/icons/delete.svg\" /></a>" ."</td><td>"
+                            ;
                             
                         }
                     }
