@@ -8,7 +8,7 @@ $db = new mysqli('smcse-stuproj00.city.ac.uk','adbt117','200012740','adbt117');
 //initialising the the php variables and linking them to the html ids//
 $TASKID = $_POST['taskid'];
 $STARTDAY =$_POST['startday'];
-$FINISHDAY= $_POST['startfinish'];
+$FINISHDAY= $_POST['starfinish'];
 $DESCRIPTION = $_POST['description'];
 $BAYNUMBER =$_POST['baynumber'];
 $RESULT= $_POST['result'];

@@ -10,6 +10,7 @@ $CARDID = $_POST['cardid'];
 $NAME =$_POST['fullname'];
 $CUSTOMERTYPE =$_POST['customertype'];
 $MOBILENUMBER= $_POST['mobilenumber'];
+$HOMENUMBER= $_POST['homenumber'];
 $EMAIL = $_POST['email'];
 $POSTCODE=$_POST['postcode'];
 $HOUSENUMBER = $_POST['housenumber'];
@@ -22,6 +23,9 @@ $query_CARDID = "SELECT CustomerCardID FROM GARITS_Customer WHERE CustomerCardID
 
 $query_MOBILENUMBER= "SELECT CustomerMobileNumber FROM GARITS_Customer WHERE CustomerMobileNumber ='$MOBILENUMBER'";
     $reg_MOBILENUMBER = mysql_query($db, $query_MOBILENUMBER);
+    
+$query_MOBILENUMBER= "SELECT CustomerMobileNumber FROM GARITS_Customer WHERE CustomerMobileNumber ='$MOBILENUMBER'";
+$reg_MOBILENUMBER = mysql_query($db, $query_MOBILENUMBER);
 
 $query_CUSTOMERFAXNUMBER = "SELECT CustomerFaxNumber FROM GARITS_Customer WHERE CustomerFaxNumber ='$CUSTOMERFAXNUMBER'";
     $reg_CUSTOMERFAXNUMBER = mysql_query($db, $query_CUSTOMERFAXNUMBER);
@@ -42,6 +46,14 @@ $query_CUSTOMERFAXNUMBER = "SELECT CustomerFaxNumber FROM GARITS_Customer WHERE 
 
 
         }
+        if(mysql_num_rows($reg_HOMENUMBER) > 0){
+            echo "<script language = 'javascript'>
+            alert('This Home Number is already in the database.');
+            window.location.href='https://smcse.city.ac.uk/student/adbt117/form.php';
+            </script>";
+
+
+        }
         if(mysql_num_rows($reg_CUSTOMERFAXNUMBER) > 0){
             echo "<script language = 'javascript'>
             alert('This Customer fax number is  already in the database.');
@@ -51,7 +63,7 @@ $query_CUSTOMERFAXNUMBER = "SELECT CustomerFaxNumber FROM GARITS_Customer WHERE 
 
         }
 else{
-        mysql_query($db, "INSERT INTO GARITS_Customer (CustomerCardID,CustomerName,CustomerMobileNumber,CustomerEmail,CustomerPostCode,CustomerHouseNumber,CustomerCardIssueDate,CustomerFaxNumber) VALUES ('".$CUSTOMERCARDID."', '".$NAME."','".$MOBILENUMBER."', '".$EMAIL."','".$POSTCODE."','".$HOUSENUMBER."' ,'".$CARDISSUEDATE."','".$CUSTOMERFAX."')"
+        mysql_query($db, "INSERT INTO GARITS_Customer (CustomerCardID,CustomerName,CustomerMobileNumber,CustomerHomeNumber,CustomerEmail,CustomerPostCode,CustomerHouseNumber,CustomerCardIssueDate,CustomerFaxNumber) VALUES ('".$CUSTOMERCARDID."', '".$NAME."','".$MOBILENUMBER."','".$HOMENUMBER."', '".$EMAIL."','".$POSTCODE."','".$HOUSENUMBER."' ,'".$CARDISSUEDATE."','".$CUSTOMERFAX."')"
     }
 //the data inputed in the fields is inserted in the database// 
 

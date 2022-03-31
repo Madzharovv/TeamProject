@@ -2,6 +2,7 @@
     include "connectdb.php";
 
     $VehicleRegistrationIDNumber = $_POST['reg'];
+    $VehicleManufacturer = $_POST['manufacturer'];
     $VehicleModel = $_POST['model'];
     $VehicleYear = $_POST['year'];
     $VehicleNumber = $_POST['number'];

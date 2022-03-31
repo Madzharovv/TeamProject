@@ -62,7 +62,7 @@
                 ><img
                   src="img/reception/reception7.svg"
                   alt="Reception Images"
-                /><span>Logoutpudiiiii</span></a
+                /><span>Logout</span></a
               >
             </li>
           </ul>
