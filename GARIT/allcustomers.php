@@ -173,7 +173,7 @@
                                     "</td><td>" .  $row["CustomerCardIssueDate"] .
                                      "</td><td>" .  $row["CustomerFaxNumber"] .
                                       "</td><td>" . "<a href=\"editcustomer.php?ID="  . $row["CustomerCardID"] . "\"><img src=\"assets/icons/edit.svg\" /></a>" ."</td><td>"
-                                      . "<a href=\"editcustomer.php?ID="  . $row["CustomerCardID"] . "\"><img src=\"assets/icons/edit.svg\" /></a>" ."</td><td>";
+                                      . "<a href=\"deletecustomer.php?ID="  . $row["CustomerCardID"] . "\"><img src=\"assets/icons/delete.svg\" /></a>" ."</td><td>";
                               
                           }
                       }
